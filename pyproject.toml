@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solar-forecasting-mlops"
+version = "0.1.0"
+description = "Day-ahead solar irradiance forecasting as a small MLOps system"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=3.11",
+    "numpy>=3.12",
+    "scikit-learn>=3.11",
+    "pyarrow>=26.0.1",
+    "requests>=2.34",
+    "pyyaml>=6.0",
+    "matplotlib>=3.11",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+    "pre-commit>=4.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
