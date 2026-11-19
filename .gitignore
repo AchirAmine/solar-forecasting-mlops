@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Data (rebuilt by scripts, never committed)
+data/*
+!data/.gitkeep
+
+# MLflow runs and models
+mlruns/
+mlartifacts/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
